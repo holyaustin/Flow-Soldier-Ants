@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://cdn.vectorstock.com">
+	<link rel="dns-prefetch" href="https://cdn.vectorstock.com">
+	<meta name="theme-color" content="#101122">
+	<script type="text/javascript" nonce="HwSYZbWDgENXfLwwEs26vf0rQzqsKT06cXdHXa7kNPE=">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]}};(window.NREUM||(NREUM={})).loader_config={licenseKey:"02e09611df",applicationID:"156179534"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var i=e[n]={exports:{}};t[n][0].call(i.exports,function(e){var i=t[n][1][e];return r(i||e)},i,i.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var i=0;i<n.length;i++)r(n[i]);return r}({1:[function(t,e,n){function r(){}function i(t,e,n,r){return function(){return s.recordSupportability("API/"+e+"/called"),o(t+e,[u.now()].concat(c(arguments)),n?null:this,r),n?void 0:this}}var o=t("handle"),a=t(9),c=t(10),f=t("ee").get("tracer"),u=t("loader"),s=t(4),d=NREUM;"undefined"==typeof window.newrelic&&(newrelic=d);var p=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",v=l+"ixn-";a(p,function(t,e){d[e]=i(l,e,!0,"api")}),d.addPageAction=i(l,"addPageAction",!0),d.setCurrentRouteName=i(l,"routeName",!0),e.exports=newrelic,d.interaction=function(){return(new r).get()};var m=r.prototype={createTracer:function(t,e){var n={},r=this,i="function"==typeof e;return o(v+"tracer",[u.now(),t,n],r),function(){if(f.emit((i?"":"no-")+"fn-start",[u.now(),r,i],n),i)try{return e.apply(this,arguments)}catch(t){throw f.emit("fn-err",[arguments,this,t],n),t}finally{f.emit("fn-end",[u.now()],n)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){m[e]=i(v,e)}),newrelic.noticeError=function(t,e){"string"==typeof t&&(t=new Error(t)),s.recordSupportability("API/noticeError/called"),o("err",[t,u.now(),!1,e])}},{}],2:[function(t,e,n){function r(t){if(NREUM.init){for(var e=NREUM.init,n=t.split("."),r=0;r<n.length-1;r++)if(e=e[n[r]],"object"!=typeof e)return;return e=e[n[n.length-1]]}}e.exports={getConfiguration:r}},{}],3:[function(t,e,n){var r=!1;try{var i=Object.defineProperty({},"passive",{get:function(){r=!0}});window.addEventListener("testPassive",null,i),window.removeEventListener("testPassive",null,i)}catch(o){}e.exports=function(t){return r?{passive:!0,capture:!!t}:!!t}},{}],4:[function(t,e,n){function r(t,e){var n=[a,t,{name:t},e];return o("storeMetric",n,null,"api"),n}function i(t,e){var n=[c,t,{name:t},e];return o("storeEventMetrics",n,null,"api"),n}var o=t("handle"),a="sm",c="cm";e.exports={constants:{SUPPORTABILITY_METRIC:a,CUSTOM_METRIC:c},recordSupportability:r,recordCustom:i}},{}],5:[function(t,e,n){function r(){return c.exists&&performance.now?Math.round(performance.now()):(o=Math.max((new Date).getTime(),o))-a}function i(){return o}var o=(new Date).getTime(),a=o,c=t(11);e.exports=r,e.exports.offset=a,e.exports.getLastTimestamp=i},{}],6:[function(t,e,n){function r(t,e){var n=t.getEntries();n.forEach(function(t){"first-paint"===t.name?l("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&l("timing",["fcp",Math.floor(t.startTime)])})}function i(t,e){var n=t.getEntries();if(n.length>0){var r=n[n.length-1];if(u&&u<r.startTime)return;var i=[r],o=a({});o&&i.push(o),l("lcp",i)}}function o(t){t.getEntries().forEach(function(t){t.hadRecentInput||l("cls",[t])})}function a(t){var e=navigator.connection||navigator.mozConnection||navigator.webkitConnection;if(e)return e.type&&(t["net-type"]=e.type),e.effectiveType&&(t["net-etype"]=e.effectiveType),e.rtt&&(t["net-rtt"]=e.rtt),e.downlink&&(t["net-dlink"]=e.downlink),t}function c(t){if(t instanceof y&&!w){var e=Math.round(t.timeStamp),n={type:t.type};a(n),e<=v.now()?n.fid=v.now()-e:e>v.offset&&e<=Date.now()?(e-=v.offset,n.fid=v.now()-e):e=v.now(),w=!0,l("timing",["fi",e,n])}}function f(t){"hidden"===t&&(u=v.now(),l("pageHide",[u]))}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var u,s,d,p,l=t("handle"),v=t("loader"),m=t(8),g=t(3),y=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){s=new PerformanceObserver(r);try{s.observe({entryTypes:["paint"]})}catch(h){}d=new PerformanceObserver(i);try{d.observe({entryTypes:["largest-contentful-paint"]})}catch(h){}p=new PerformanceObserver(o);try{p.observe({type:"layout-shift",buffered:!0})}catch(h){}}if("addEventListener"in document){var w=!1,b=["click","keydown","mousedown","pointerdown","touchstart"];b.forEach(function(t){document.addEventListener(t,c,g(!1))})}m(f)}},{}],7:[function(t,e,n){function r(t,e){if(!i)return!1;if(t!==i)return!1;if(!e)return!0;if(!o)return!1;for(var n=o.split("."),r=e.split("."),a=0;a<r.length;a++)if(r[a]!==n[a])return!1;return!0}var i=null,o=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var c=navigator.userAgent,f=c.match(a);f&&c.indexOf("Chrome")===-1&&c.indexOf("Chromium")===-1&&(i="Safari",o=f[1])}e.exports={agent:i,version:o,match:r}},{}],8:[function(t,e,n){function r(t){function e(){t(c&&document[c]?document[c]:document[o]?"hidden":"visible")}"addEventListener"in document&&a&&document.addEventListener(a,e,i(!1))}var i=t(3);e.exports=r;var o,a,c;"undefined"!=typeof document.hidden?(o="hidden",a="visibilitychange",c="visibilityState"):"undefined"!=typeof document.msHidden?(o="msHidden",a="msvisibilitychange"):"undefined"!=typeof document.webkitHidden&&(o="webkitHidden",a="webkitvisibilitychange",c="webkitVisibilityState")},{}],9:[function(t,e,n){function r(t,e){var n=[],r="",o=0;for(r in t)i.call(t,r)&&(n[o]=e(r,t[r]),o+=1);return n}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],10:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,i=n-e||0,o=Array(i<0?0:i);++r<i;)o[r]=t[e+r];return o}e.exports=r},{}],11:[function(t,e,n){e.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,e,n){function r(){}function i(t){function e(t){return t&&t instanceof r?t:t?u(t,f,a):a()}function n(n,r,i,o,a){if(a!==!1&&(a=!0),!l.aborted||o){t&&a&&t(n,r,i);for(var c=e(i),f=m(n),u=f.length,s=0;s<u;s++)f[s].apply(c,r);var p=d[w[n]];return p&&p.push([b,n,r,c]),c}}function o(t,e){h[t]=m(t).concat(e)}function v(t,e){var n=h[t];if(n)for(var r=0;r<n.length;r++)n[r]===e&&n.splice(r,1)}function m(t){return h[t]||[]}function g(t){return p[t]=p[t]||i(n)}function y(t,e){l.aborted||s(t,function(t,n){e=e||"feature",w[n]=e,e in d||(d[e]=[])})}var h={},w={},b={on:o,addEventListener:o,removeEventListener:v,emit:n,get:g,listeners:m,context:e,buffer:y,abort:c,aborted:!1};return b}function o(t){return u(t,f,a)}function a(){return new r}function c(){(d.api||d.feature)&&(l.aborted=!0,d=l.backlog={})}var f="nr@context",u=t("gos"),s=t(9),d={},p={},l=e.exports=i();e.exports.getOrSetContext=o,l.backlog=d},{}],gos:[function(t,e,n){function r(t,e,n){if(i.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(o){}return t[e]=r,r}var i=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){i.buffer([t],r),i.emit(t,e,n)}var i=t("ee").get("handle");e.exports=r,r.ee=i},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,o,function(){return i++})}var i=1,o="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!M++){var t=T.info=NREUM.info,e=m.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return u.abort();f(x,function(e,n){t[e]||(t[e]=n)});var n=a();c("mark",["onload",n+T.offset],null,"api"),c("timing",["load",n]);var r=m.createElement("script");0===t.agent.indexOf("http://")||0===t.agent.indexOf("https://")?r.src=t.agent:r.src=l+"://"+t.agent,e.parentNode.insertBefore(r,e)}}function i(){"complete"===m.readyState&&o()}function o(){c("mark",["domContent",a()+T.offset],null,"api")}var a=t(5),c=t("handle"),f=t(9),u=t("ee"),s=t(7),d=t(2),p=t(3),l=d.getConfiguration("ssl")===!1?"http":"https",v=window,m=v.document,g="addEventListener",y="attachEvent",h=v.XMLHttpRequest,w=h&&h.prototype,b=!1;NREUM.o={ST:setTimeout,SI:v.setImmediate,CT:clearTimeout,XHR:h,REQ:v.Request,EV:v.Event,PR:v.Promise,MO:v.MutationObserver};var E=""+location,x={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1216.min.js"},O=h&&w&&w[g]&&!/CriOS/.test(navigator.userAgent),T=e.exports={offset:a.getLastTimestamp(),now:a,origin:E,features:{},xhrWrappable:O,userAgent:s,disabled:b};if(!b){t(1),t(6),m[g]?(m[g]("DOMContentLoaded",o,p(!1)),v[g]("load",r,p(!1))):(m[y]("onreadystatechange",i),v[y]("onload",r)),c("mark",["firstbyte",a.getLastTimestamp()],null,"api");var M=0}},{}],"wrap-function":[function(t,e,n){function r(t,e){function n(e,n,r,f,u){function nrWrapper(){var o,a,s,p;try{a=this,o=d(arguments),s="function"==typeof r?r(o,a):r||{}}catch(l){i([l,"",[o,a,f],s],t)}c(n+"start",[o,a,f],s,u);try{return p=e.apply(a,o)}catch(v){throw c(n+"err",[o,a,v],s,u),v}finally{c(n+"end",[o,a,p],s,u)}}return a(e)?e:(n||(n=""),nrWrapper[p]=e,o(e,nrWrapper,t),nrWrapper)}function r(t,e,r,i,o){r||(r="");var c,f,u,s="-"===r.charAt(0);for(u=0;u<e.length;u++)f=e[u],c=t[f],a(c)||(t[f]=n(c,s?f+r:r,i,f,o))}function c(n,r,o,a){if(!v||e){var c=v;v=!0;try{t.emit(n,r,o,e,a)}catch(f){i([f,n,r,o],t)}v=c}}return t||(t=s),n.inPlace=r,n.flag=p,n}function i(t,e){e||(e=s);try{e.emit("internal-error",t)}catch(n){}}function o(t,e,n){if(Object.defineProperty&&Object.keys)try{var r=Object.keys(t);return r.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(o){i([o],n)}for(var a in t)l.call(t,a)&&(e[a]=t[a]);return e}function a(t){return!(t&&t instanceof Function&&t.apply&&!t[p])}function c(t,e){var n=e(t);return n[p]=t,o(t,n,s),n}function f(t,e,n){var r=t[e];t[e]=c(r,n)}function u(){for(var t=arguments.length,e=new Array(t),n=0;n<t;++n)e[n]=arguments[n];return e}var s=t("ee"),d=t(10),p="nr@original",l=Object.prototype.hasOwnProperty,v=!1;e.exports=r,e.exports.wrapFunction=c,e.exports.wrapInPlace=f,e.exports.argsToArray=u},{}]},{},["loader"]);</script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="csrf-name" content="csrf62f5823e68d4f">
+	<meta name="csrf-value" content="fd68003be052c6e190a29896aacc8668">
+	<meta name="csp-nonce" content="HwSYZbWDgENXfLwwEs26vf0rQzqsKT06cXdHXa7kNPE=">
+	<meta name="cart-hash" content="d751713988987e9331980363e24189ce">
+	<meta name="live-settings" content="[]">
+	<meta name="twitter:site" content="@VectorStock">
+	<meta property="og:site_name" content="VectorStock">
+	<meta property="fb:app_id" content="241100862642313">
+
+	<link rel="shortcut icon" href="https://cdn.vectorstock.com/img/icons/favicon.ico" type="image/x-icon">
+	<link rel="search" type="application/opensearchdescription+xml" title="VectorStock Search" href="https://www.vectorstock.com/xml/searchbox.xml">
+
+	<title>Soldier ant icon simple style Royalty Free Vector Image</title>
+	<meta name="description" content="Soldier ant icon. Simple illustration of Soldier ant vector icon for web design isolated on white background. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images.">
+	
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://www.vectorstock.com/royalty-free-vector/soldier-ant-icon-simple-style-vector-38338747">
+	<meta property="og:title" content="Soldier ant icon simple style vector image on VectorStock">
+	<meta property="og:description" content="Soldier ant icon. Simple illustration of Soldier ant vector icon for web design isolated on white background. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images.">
+	<meta property="og:image" content="https://cdn3.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg">
+	<meta property="og:image:url" content="https://cdn3.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg">
+	<meta property="og:image:secure_url" content="https://cdn3.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg">
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="1000">
+	<meta property="og:image:height" content="1000">
+	
+	<meta name="twitter:card" content="summary">
+	<meta name="twitter:url" content="https://www.vectorstock.com/royalty-free-vector/soldier-ant-icon-simple-style-vector-38338747">
+	<meta name="twitter:title" content="Soldier ant icon simple style vector image">
+	<meta name="twitter:description" content="Soldier ant icon. Simple illustration of Soldier ant vector icon for web design isolated on white background">
+	<meta name="twitter:image" content="https://cdn3.vectorstock.com/i/thumb-large/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg">
+	<meta name="twitter:image:width" content="238">
+	<meta name="twitter:image:height" content="250">
+
+	<link rel="canonical" href="https://www.vectorstock.com/royalty-free-vector/soldier-ant-icon-simple-style-vector-38338747">
+
+	<link rel="stylesheet" type="text/css" href="/cache/common1659702078.min.css">
+	<link rel="stylesheet" type="text/css" href="/cache/common-payment1659702078.min.css">
+	<link rel="stylesheet" type="text/css" href="/cache/vector1659702078.min.css">
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-QBXWNL4G7Q"></script>
+	<script src="/cache/common1660007307.min.js"></script>
+	<script src="/cache/common-payment-paddle1660007307.min.js"></script>
+	<script src="/cache/vector1660007307.min.js"></script>
+</head>
+<body>
+
+<!-- Top header -->
+<header>
+	<nav class="top">
+		<figure>
+			<a href="/" title="VectorStock&reg;">VectorStock&reg;</a>
+		</figure>
+
+		<div class="grid">
+			<form id="searchbox" class="focused empty">
+				<div class="wrap">
+					<fieldset>
+						<div class="contents">
+							<div class="tags">
+								<ul></ul>
+							</div>
+							<div class="input">
+								<input type="text" name="input" autocomplete="off" autocapitalize="none" spellcheck="true" value="" placeholder="Search&hellip;" maxlength="50" autofocus>
+								<button type="button" data-action="clear">&times;</button>
+							</div>
+
+							<input type="hidden" name="category" value="">
+							<input type="hidden" name="custom_srp" value="">
+							<input type="hidden" name="artist" value="">
+							<input type="hidden" name="similar" value="">
+						</div>
+					</fieldset>
+
+					<button type="submit">
+						<span class="icon">Search</span>
+					</button>
+				</div>
+			</form>
+			<ul>
+				<li><a href="/royalty-free-vectors">All Vectors</a></li>
+				<li><a href="/free-vectors">Free Vectors</a></li>
+			</ul>
+		</div>
+
+		<div class="aside">
+			<ul>
+				<li><a href="/popular-categories" title="Popular Categories">Categories</a></li>
+				<li><a href="/pricing" title="Pricing">Pricing</a></li>
+				<li class="account">
+					<button type="button" data-action="signup">Sign Up</button>
+					<button type="button" data-action="login">Login</button>
+				</li>
+			</ul>
+		</div>
+
+		<div id="mobilenav-icon">
+			<span></span><span></span><span></span><span></span>
+		</div>
+	</nav>
+
+	<!-- Submenu -->
+		<nav id="searchrelated"></nav>	
+
+	<!-- Mobile menu -->
+	<div id="mobilenav-menu">
+		<div>
+			<div class="group">
+				<h4>Browse</h4>
+				<ul>
+					<li><a href="/royalty-free-vectors">All Vectors</a></li>
+					<li><a href="/free-vectors">Free Vectors</a></li>
+				</ul>
+			</div>
+			<div class="group">
+				<h4>Account</h4>
+				<ul>
+					<li class="account">
+						<ul>
+							<li><a href="/signup">Sign Up</a></li>
+							<li data-action="login"><a href="/?login=1">Login&hellip;</a></li>
+							<li><a href="/pricing">Pricing</a></li>
+						</ul>
+					</li>
+				</ul>
+				<form method="get" action="/auth/logout" class="logout">
+					<input type="hidden" name="logout" value="1">
+				</form>
+			</div>
+			<div class="group">
+				<h4>Help</h4>
+				<ul>
+					<li><a href="/faq"><abbr title="Frequently Asked Questions">FAQs</abbr></a></li>
+					<li><a href="/contact">Contact Us</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</header>
+
+		<!-- Account Menu Tabs -->
+		<aside id="nav_sidebar" class="tabs tabsDark">
+
+			<nav>
+				<ul role="tablist">
+					<li data-tab-id="signup" class=""><span role="tab"><span>Sign Up</span></span></li>
+					<li data-tab-id="login" class="selected"><span role="tab"><span>Log In</span></span></li>
+				</ul>
+			</nav>
+
+			<section id="sb_signup" data-tab-id="signup" class="">
+				<div class="primary">
+					<p>New to VectorStock?</p>
+					<p><em>We&apos;re the largest royalty-free, vector-only stock agency in the world.</em></p>
+					<p>Every week we add new premium graphics by the thousands.</p>
+				</div>
+				<div class="secondary">
+					<p>Whether you&apos;re a global ad&nbsp;agency or a freelance graphic designer, we have the vector graphics to make your project come to life.</p>
+					<p>Buy Vectors, sell Vectors or both. <a href="/signup">Sign up now, it&rsquo;s free.</a></p>
+				</div>
+				<div class="footer">
+					<button class="master">
+						<span class="title">Sign Up...</span>
+						<span class="value">
+							<span class="symbol signup"></span>
+						</span>
+					</button>
+				</div>
+			</section>
+
+			<section id="sb_login" data-tab-id="login" class="selected">
+				<form action="/auth/login" method="post">
+					<fieldset class="">
+						<label for="vs_username">Email / Username</label>
+						<div class="textfield">
+							<input type="text" id="vs_username" name="vs_username" value="" autocomplete="on" tabindex="1">
+						</div>
+					</fieldset>
+					<fieldset class="">
+						<label for="vs_password">Password</label>
+						<button type="button" class="forgot">Forgot Password</button>
+						<div class="textfield">
+							<input type="password" id="vs_password" name="vs_password" value="" autocomplete="on" tabindex="2"  maxlength="72">
+						</div>
+					</fieldset>
+
+
+					<button type="submit" tabindex="4">Log In</button>
+				</form>
+				<div class="alternatives">
+					<h6>Or Login With</h6>
+					<ul>
+						<li class="gp"><a href="/">
+							<span class="title">Google</span>
+							<span class="icon"></span>
+						</a></li>
+						<li class="fb"><a href="/">
+							<span class="title">Facebook</span>
+							<span class="icon"></span>
+						</a></li>
+					</ul>
+				</div>
+
+				
+			</section>
+		</aside>
+
+	<!-- Page -->
+	<article>
+		<section id="vs-asset">
+
+			<!-- Aside -->
+			<div class="aside">
+				<ol itemscope itemtype="http://schema.org/BreadcrumbList">
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a itemtype="http://schema.org/Thing" itemprop="item" href="/royalty-free-vectors">
+							<span itemprop="name">Royalty Free Vectors</span>
+						</a>
+						<meta itemprop="position" content="1" />
+					</li>
+					<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+						<a itemtype="http://schema.org/Thing" itemprop="item" href="/royalty-free-vectors/soldier-vectors">
+							<span itemprop="name">Soldier Vectors</span>
+						</a>
+						<meta itemprop="position" content="2" />
+					</li>
+				</ol>
+
+				<h1>Soldier ant icon simple style vector&nbsp;image</h1>
+
+				<figure style="padding-top: 99%;" class="target">
+					<div class="highres" data-src="https://cdn3.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg">
+						<picture>
+							<source type="image/webp" srcset="https://cdn.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.webp">
+							<source type="image/jpeg" srcset="https://cdn3.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg">
+							<img src="https://cdn3.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg" importance="high" title="Soldier ant icon simple style vector image" alt="Soldier ant icon simple style">
+						</picture>
+					</div>
+					<div class="overlay"></div>
+				</figure>
+
+				<form data-loggedin="0" data-licenses="2" data-license="standard" data-status="" data-payment="single-image">
+					<input type="hidden" id="vector_id" value="38338747">
+					<input type="hidden" id="vector_title" value="Soldier ant icon simple style">
+					<input type="hidden" id="vector_description" value="Soldier ant icon. Simple illustration of Soldier ant vector icon for web design isolated on white background. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images.">
+					<input type="hidden" id="vector_url" value="https://www.vectorstock.com/royalty-free-vector/soldier-ant-icon-simple-style-vector-38338747">
+					<input type="hidden" id="vector_media" value="https://cdn3.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg">
+					<input type="hidden" id="vector_ratio" value="1">
+					<input type="hidden" id="vector_license_status" value="">
+					<input type="hidden" id="artist_name" value="Anatolir">
+					<input type="hidden" id="account_user" value="0">
+
+					<input type="hidden" id="vector_transparent_png" value="0">
+					<input type="hidden" id="vector_download_urls" value="[]">
+					<input type="hidden" id="vector_license_options" value="[{&quot;type&quot;:&quot;standard&quot;,&quot;cost&quot;:{&quot;single-image&quot;:14.99,&quot;credits&quot;:1,&quot;subscription&quot;:1}},{&quot;type&quot;:&quot;expanded&quot;,&quot;cost&quot;:{&quot;single-image&quot;:39.99,&quot;credits&quot;:30}}]">
+					<input type="hidden" id="account_filetype" value="zip">
+					<input type="hidden" id="account_customizations" value="[]">
+					<input type="hidden" id="account_cloud" value="[{&quot;type&quot;:&quot;googledrive&quot;,&quot;status&quot;:&quot;connect&quot;}]">
+					
+					<div class="options">
+						<!--
+						-- OPTION: License type
+						-->
+						<div class="option" data-type="license" data-license="standard" data-licenses="2">
+							<h6><span class="type">License</span><a href="/faq/members/standard-license">Learn More</a></h6>
+							<div class="optgroup radgroup">
+								<fieldset class="checked">
+									<label for="f_license_standard">
+										<input type="radio" id="f_license_standard" name="license" value="standard" checked="checked" tabindex="2">
+										<span class="label">Standard</span>
+										<span class="descr">For Print, Advertising, Design</span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_license_expanded">
+										<input type="radio" id="f_license_expanded" name="license" value="expanded" tabindex="4">
+										<span class="label">Expanded</span>
+										<span class="descr">For Print on Demand &amp; Resale</span>
+									</label>
+								</fieldset>
+							</div>
+
+							<div class="help">
+								<p>The license type determines how you can use this image.</p>
+								<table>
+									<thead>
+										<tr>
+											<th></th>
+																						<th data-license="standard">Std.</th>																						<th data-license="expanded">Exp.</th>										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td>Print / Editorial</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Graphic Design</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Web Design</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Social Media</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Edit &amp; Modify</td>
+											<td data-license="standard"><span class="yes"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Multi-user</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Resale Items</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+										<tr>
+											<td>Print on Demand</td>
+											<td data-license="standard"><span class="no"></span></td><td data-license="expanded"><span class="yes"></span></td> 											
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						
+						<!--
+						-- OPTION: Payment options (Standard)
+						-->
+						<div class="option" data-type="payment" data-license="standard">
+							<h6><span class="type">Ways to Buy</span><a href="/pricing">Compare</a></h6>
+							<div class="optgroup radgroup" data-license="standard">
+								<fieldset class="checked" >
+									<label for="f_payment_standard_single-image">
+										<input type="radio" id="f_payment_standard_single-image" name="payment_standard" data-cost="14.99" value="single-image"  checked="checked" tabindex="5">
+										<span class="label">Pay-per-Image</span>
+										<span class="value"><small>&#36;</small><var>14.99</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_standard_credits">
+										<input type="radio" id="f_payment_standard_credits" name="payment_standard" data-cost="1" value="credits" tabindex="6">
+										<span class="label">Credits</span>
+										<span class="value"><small>&#36;</small><var>1.00</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_standard_subscription">
+										<input type="radio" id="f_payment_standard_subscription" name="payment_standard" data-cost="1" value="subscription" tabindex="7">
+										<span class="label">Subscription</span>
+										<span class="value"><small>&#36;</small><var>0.69</var></span>
+									</label>
+								</fieldset>
+							</div>
+							<div class="help">
+								<p>There are three ways to pay for Standard licenses. Prices are &#36;<abbr title="United States Dollar">USD</abbr>.</p>
+
+								<table>
+									<thead>
+										<tr>
+											<th>Pay with</th>
+											<th>Image Price</th>
+										</tr>
+									</thead>
+									<tbody>
+																				<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pay-per-Image</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>14.99</span>
+												</span>
+												<span class="byline">One-time payment</span>
+											</td>
+										</tr>
+																				<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pre-paid Credits</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>1</span>
+												</span>
+												<span class="byline">Download images on-demand (1 credit = &#36;1). Minimum purchase of 30.</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Subscription Plan</span>
+													<span class="dm"></span>
+													<span class="dd"><em>From</em> 69&cent;</span>
+												</span>
+												<span class="byline">Choose a monthly plan. Unused downloads automatically roll into following month.</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<!--
+						-- OPTION: Payment options (Expanded)
+						-->
+						<div class="option" data-type="payment" data-license="expanded">
+							<h6><span class="type">Ways to Buy</span><a href="/faq/members/ways-to-buy">Compare</a></h6>
+							<div class="optgroup radgroup" data-license="expanded">
+								<fieldset class="checked">
+									<label for="f_payment_expanded_single-image">
+										<input type="radio" id="f_payment_expanded_single-image" name="payment_expanded" data-cost="39.99" value="single-image" checked="checked" tabindex="8">
+										<span class="label">Pay-per-Image</span>
+										<span class="value"><small>&#36;</small><var>39.99</var></span>
+									</label>
+								</fieldset>
+								<fieldset>
+									<label for="f_payment_expanded_credits">
+										<input type="radio" id="f_payment_expanded_credits" name="payment_expanded" data-cost="30" value="credits" tabindex="9">
+										<span class="label">Credits</span>
+										<span class="value"><small>&#36;</small><var>30.00</var></span>
+									</label>
+								</fieldset>
+							</div>
+														<div class="help">
+								<p>There are two ways to pay for Expanded licenses. Prices are &#36;<abbr title="United States Dollar">USD</abbr>.</p>
+
+								<table>
+									<thead>
+										<tr>
+											<th>Pay with</th>
+											<th>Cost per Image</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pay-per-Image</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>39.99</span>
+												</span>
+												<span class="byline">One-off payment, no signup needed.</span>
+											</td>
+										</tr>
+										<tr>
+											<td colspan="2">
+												<span class="title">
+													<span class="dt">Pre-paid Credits</span>
+													<span class="dm"></span>
+													<span class="dd"><small>&#36;</small>30</span>
+												</span>
+												<span class="byline">Download images on-demand (1 credit = &#36;1).</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+													</div>
+						<!--
+						-- OPTION: Customization
+						-->
+						<div class="option" data-type="customization">
+							<h6><span class="type">New Option!</span><a href="/faq/members/what-is-hire-a-designer">What is this?</a></h6>
+							<div class="optgroup chkgroup">
+								<fieldset>
+									<label for="f_payment_customization">
+										<input type="checkbox" id="f_payment_customization" name="payment_customization" data-cost="85" value="customization" tabindex="12">
+										<span class="label">Customize image</span>
+										<span class="descr">Only available with Pay-per-Image</span>
+										<span class="value"><small>&#36;</small><var>85.00</var></span>
+									</label>
+								</fieldset>
+							</div>
+							<div class="help">
+								<p>Love the image but just need a few modifications? Let our talented artists do the work for you!</p>
+								<p>We&rsquo;ll connect you with a designer who can make updates and send you the artwork in a format of your choice.</p>
+								<h4>Examples</h4>
+								<ul>
+									<li>Change the text</li>
+									<li>Modify colors</li>
+									<li>Resize to new dimensions</li>
+									<li>Include logo or symbol</li>
+									<li>Add your company or business name</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="download">
+						<button type="button" data-action="download">
+							<span class="label">Download Image</span>
+							<span class="icon"></span>
+						</button>
+						<h6><span class="label">Files Included</span></h6>
+						<div class="help">
+							<span class="loading"><span class="label">Loading Details...</span></span>
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<!-- Image -->
+			<div class="image">
+				<figure data-orientation="square" style="padding-top: 99%;" class="target">
+					<div class="highres" data-src="https://cdn3.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg">
+						<picture>
+							<source type="image/webp" srcset="https://cdn.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.webp">
+							<source type="image/jpeg" srcset="https://cdn3.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg">
+							<img src="https://cdn3.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg" importance="high" title="Soldier ant icon simple style vector image" alt="Soldier ant icon simple style">
+						</picture>
+					</div>
+					<div class="overlay"></div>
+					<div class="panels">
+						<div class="share">
+							<ul>
+								<li><button type="button" data-action="pinterest"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M12.5,0C5.6,0,0,5.6,0,12.5c0,5.12,3.08,9.52,7.48,11.45c-0.03-0.87-0.01-1.92,0.22-2.87c0.24-1.01,1.61-6.81,1.61-6.81s-0.4-0.8-0.4-1.98c0-1.85,1.07-3.24,2.41-3.24c1.14,0,1.69,0.85,1.69,1.88c0,1.14-0.73,2.85-1.1,4.44c-0.31,1.33,0.67,2.41,1.97,2.41c2.37,0,3.96-3.04,3.96-6.65c0-2.74-1.85-4.79-5.2-4.79c-3.79,0-6.15,2.83-6.15,5.99c0,1.09,0.32,1.86,0.82,2.45c0.23,0.27,0.26,0.38,0.18,0.7c-0.06,0.23-0.2,0.78-0.25,1c-0.08,0.32-0.34,0.43-0.63,0.31c-1.75-0.71-2.56-2.62-2.56-4.77c0-3.55,3-7.81,8.93-7.81c4.77,0,7.91,3.45,7.91,7.16c0,4.9-2.73,8.57-6.75,8.57c-1.35,0-2.62-0.73-3.05-1.56c0,0-0.73,2.88-0.88,3.44c-0.27,0.96-0.78,1.93-1.26,2.68C10.08,24.82,11.27,25,12.5,25C19.4,25,25,19.4,25,12.5S19.4,0,12.5,0L12.5,0z"/></svg></span><span class="label">Save to Pinterest</span></button></li>
+								<li><button type="button" data-action="facebook"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M22.44,1H2.56C1.7,1,1,1.7,1,2.56v19.88C1,23.3,1.7,24,2.56,24h10.41v-8.89H9.98v-3.46h2.99V9.1c0-2.96,1.81-4.58,4.45-4.58c1.27,0,2.35,0.09,2.67,0.14v3.1l-1.83,0c-1.44,0-1.72,0.68-1.72,1.69v2.21h3.43l-0.45,3.46h-2.98V24h5.89C23.3,24,24,23.3,24,22.44V2.56C24,1.7,23.3,1,22.44,1z"/></svg></span><span class="label">Post to Facebook</span></button></li>
+								<li><button type="button" data-action="twitter"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M7.86,22.5c9.43,0,14.59-7.69,14.59-14.37c0-0.22,0-0.44-0.01-0.65c1-0.71,1.87-1.6,2.56-2.61c-0.92,0.4-1.91,0.67-2.95,0.79c1.06-0.62,1.87-1.61,2.26-2.79c-0.99,0.58-2.09,1-3.26,1.23c-0.94-0.98-2.27-1.6-3.74-1.6c-2.83,0-5.13,2.26-5.13,5.05c0,0.4,0.05,0.78,0.13,1.15C8.05,8.49,4.27,6.48,1.74,3.42C1.3,4.17,1.05,5.04,1.05,5.96c0,1.75,0.91,3.3,2.28,4.2C2.49,10.14,1.7,9.91,1,9.53C1,9.55,1,9.58,1,9.6c0,2.45,1.77,4.49,4.11,4.95c-0.43,0.12-0.88,0.18-1.35,0.18c-0.33,0-0.65-0.03-0.96-0.09c0.65,2.01,2.55,3.47,4.79,3.51C5.84,19.5,3.63,20.3,1.22,20.3c-0.41,0-0.82-0.02-1.22-0.07C2.27,21.66,4.97,22.5,7.86,22.5"/></svg></span><span class="label">Post to Twitter</span></button></li>
+							</ul>
+							<ul>
+								<li><button type="button" data-action="email"><span class="icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" focusable="false" role="img"><path d="M24.37,2.25c-0.07,0-0.15,0.01-0.22,0.04l-2.75,1L0.24,12.14c-0.3,0.13-0.33,0.54-0.05,0.71l3.94,2.39l0.99,0.6l1.94,5.58c0.05,0.14,0.25,0.1,0.25-0.04l0.03-4.19v-0.05l8.87-7.49c0.15-0.13,0.37-0.12,0.52,0.01l0,0c0.17,0.15,0.17,0.42,0.01,0.58L8.85,18v0.18l7.53,4.52c0.21,0.13,0.48,0.04,0.57-0.19l7.89-19.11l0.11-0.28C25.13,2.68,24.8,2.25,24.37,2.25z"/></svg></span><span class="label">Send by Email</span></button></li>
+							</ul>
+						</div>
+						<div class="composite">
+							<button type="button" data-action="download"><span><span class="label">Download JPG Preview Image</span></span></button>
+						</div>
+					</div>
+				</figure>
+				<div class="details">
+					<div class="meta">
+						<ul>
+							<li class="meta-id">
+								<dl><dt>Image ID</dt><dd>38338747</dd></dl>
+							</li>
+							<li class="meta-color-mode">
+								<dl><dt>Color Mode</dt><dd>RGB</dd></dl>
+							</li>
+							<li class="meta-artist">
+								<dl>
+									<dt>Artist</dt>
+									<dd>
+										<a href="/royalty-free-vectors/vectors-by_Anatolir" rel="nofollow">Anatolir</a>
+										<button type="button" data-action="follow" title="Follow Artists that you like to create a newsfeed of their recent images."><span class="label">Follow</span></button>
+									</dd>
+								</dl>
+							</li>
+						</ul>
+					</div>
+					<div class="options" data-total="2">
+						<ul>
+							<li class="opt-like">
+								<button type="button" data-action="like" data-count="0"><span class="icon">&hearts;</span><span class="label">Like</span><span class="tally"></span></button>
+							</li>
+							<li class="opt-cart">
+								<button type="button" data-action="cart"><span class="icon">+</span><span class="label">Cart</span></button>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+			<!-- Metadata -->
+			<div class="metadata">
+				<div itemtype="http://schema.org/ImageObject" itemscope>
+					<meta itemprop="contentUrl" content="https://cdn3.vectorstock.com/i/1000x1000/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg">
+					<meta itemprop="thumbnailUrl" content="https://cdn3.vectorstock.com/i/thumb-large/87/47/soldier-ant-icon-simple-style-vector-38338747.jpg">
+					<meta itemprop="name" content="Soldier ant icon simple style">
+					<meta itemprop="description" content="Soldier ant icon. Simple illustration of Soldier ant vector icon for web design isolated on white background. Download a free preview or high-quality Adobe Illustrator (ai), EPS, PDF vectors and high-res JPEG and PNG images. vector image">
+					<meta itemprop="author" content="Anatolir"/>
+					<meta itemprop="datePublished" content="2021-06-24">
+					<meta itemprop="license" content="https://www.vectorstock.com/faq/members/standard-license">
+					<meta itemprop="acquireLicensePage" content="https://www.vectorstock.com/royalty-free-vector/soldier-ant-icon-simple-style-vector-38338747">
+					<meta itemprop="sourceOrganization" content="VectorStock.com">
+				</div>
+			</div>
+
+		</section>
+
+
+		<section id="vs-related">
+			<div id="group-similar" class="group">
+				<h6><span class="icon"></span><strong>Similar Images</strong></h6>
+
+				<div class="gallery large">
+					<ul>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/56/88/black-ant-with-a-load-on-its-back-vector-33575688.jpg"><a href="//www.vectorstock.com/royalty-free-vector/black-ant-with-a-load-on-its-back-vector-33575688" title="black ant with a load on its back vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/56/88/black-ant-with-a-load-on-its-back-vector-33575688.jpg" title="black ant with a load on its back" alt="black ant with a load on its back vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/96/45/set-of-insects-logos-vintage-pets-labels-for-bar-vector-21969645.jpg"><a href="//www.vectorstock.com/royalty-free-vector/set-of-insects-logos-vintage-pets-labels-for-bar-vector-21969645" title="set of insects logos vintage pets labels for bar vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/96/45/set-of-insects-logos-vintage-pets-labels-for-bar-vector-21969645.jpg" title="set of insects logos vintage pets labels for bar" alt="set of insects logos vintage pets labels for bar vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/25/30/modern-and-unique-grasshopper-head-logo-vector-38242530.jpg"><a href="//www.vectorstock.com/royalty-free-vector/modern-and-unique-grasshopper-head-logo-vector-38242530" title="modern and unique grasshopper head logo vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/25/30/modern-and-unique-grasshopper-head-logo-vector-38242530.jpg" title="modern and unique grasshopper head logo" alt="modern and unique grasshopper head logo vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/06/23/circle-black-ants-logo-design-vector-28510623.jpg"><a href="//www.vectorstock.com/royalty-free-vector/circle-black-ants-logo-design-vector-28510623" title="circle black ants logo design vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/06/23/circle-black-ants-logo-design-vector-28510623.jpg" title="circle black ants logo design" alt="circle black ants logo design vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/90/88/black-ant-silhouette-viwed-from-above-vector-26999088.jpg"><a href="//www.vectorstock.com/royalty-free-vector/black-ant-silhouette-viwed-from-above-vector-26999088" title="black ant silhouette viwed from above vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/90/88/black-ant-silhouette-viwed-from-above-vector-26999088.jpg" title="black ant silhouette viwed from above" alt="black ant silhouette viwed from above vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/73/01/crawling-insects-set-ant-spider-beetle-vector-24367301.jpg"><a href="//www.vectorstock.com/royalty-free-vector/crawling-insects-set-ant-spider-beetle-vector-24367301" title="crawling insects set - ant spider beetle vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/73/01/crawling-insects-set-ant-spider-beetle-vector-24367301.jpg" title="crawling insects set - ant spider beetle" alt="crawling insects set - ant spider beetle vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/33/74/insect-bug-icons-vector-21193374.jpg"><a href="//www.vectorstock.com/royalty-free-vector/insect-bug-icons-vector-21193374" title="insect bug icons vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/33/74/insect-bug-icons-vector-21193374.jpg" title="insect bug icons" alt="insect bug icons vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/78/61/popular-insects-line-icons-set-vector-20747861.jpg"><a href="//www.vectorstock.com/royalty-free-vector/popular-insects-line-icons-set-vector-20747861" title="popular insects line icons set vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/78/61/popular-insects-line-icons-set-vector-20747861.jpg" title="popular insects line icons set" alt="popular insects line icons set vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/09/34/danger-insect-black-silhouette-icons-set-vector-21770934.jpg"><a href="//www.vectorstock.com/royalty-free-vector/danger-insect-black-silhouette-icons-set-vector-21770934" title="danger insect black silhouette icons set vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/09/34/danger-insect-black-silhouette-icons-set-vector-21770934.jpg" title="danger insect black silhouette icons set" alt="danger insect black silhouette icons set vector image"></noscript></a></li>
+						<li data-src="https://cdn2.vectorstock.com/i/thumb-large/06/51/insects-icon-set-in-linear-style-vector-30250651.jpg"><a href="//www.vectorstock.com/royalty-free-vector/insects-icon-set-in-linear-style-vector-30250651" title="insects icon set in linear style vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumb-large/06/51/insects-icon-set-in-linear-style-vector-30250651.jpg" title="insects icon set in linear style" alt="insects icon set in linear style vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/59/69/set-black-silhouettes-insects-vector-34495969.jpg"><a href="//www.vectorstock.com/royalty-free-vector/set-black-silhouettes-insects-vector-34495969" title="set black silhouettes insects vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/59/69/set-black-silhouettes-insects-vector-34495969.jpg" title="set black silhouettes insects" alt="set black silhouettes insects vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/32/17/simple-spartan-silhouette-head-vector-21283217.jpg"><a href="//www.vectorstock.com/royalty-free-vector/simple-spartan-silhouette-head-vector-21283217" title="simple spartan silhouette head vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/32/17/simple-spartan-silhouette-head-vector-21283217.jpg" title="simple spartan silhouette head" alt="simple spartan silhouette head vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/27/15/ant-logo-vector-23682715.jpg"><a href="//www.vectorstock.com/royalty-free-vector/ant-logo-vector-23682715" title="ant-logo vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/27/15/ant-logo-vector-23682715.jpg" title="ant-logo" alt="ant-logo vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/48/57/single-continuous-line-drawing-large-anteater-vector-33564857.jpg"><a href="//www.vectorstock.com/royalty-free-vector/single-continuous-line-drawing-large-anteater-vector-33564857" title="single continuous line drawing large anteater vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/48/57/single-continuous-line-drawing-large-anteater-vector-33564857.jpg" title="single continuous line drawing large anteater" alt="single continuous line drawing large anteater vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/97/44/insects-set-icons-blue-glowing-neon-style-vector-35439744.jpg"><a href="//www.vectorstock.com/royalty-free-vector/insects-set-icons-blue-glowing-neon-style-vector-35439744" title="insects set icons blue glowing neon style vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/97/44/insects-set-icons-blue-glowing-neon-style-vector-35439744.jpg" title="insects set icons blue glowing neon style" alt="insects set icons blue glowing neon style vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/36/74/ant-trail-marching-bug-vector-36033674.jpg"><a href="//www.vectorstock.com/royalty-free-vector/ant-trail-marching-bug-vector-36033674" title="ant trail marching bug vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/36/74/ant-trail-marching-bug-vector-36033674.jpg" title="ant trail marching bug" alt="ant trail marching bug vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/69/78/beetles-insects-caterpillars-worm-ant-spider-vector-37726978.jpg"><a href="//www.vectorstock.com/royalty-free-vector/beetles-insects-caterpillars-worm-ant-spider-vector-37726978" title="beetles insects caterpillars worm ant spider vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/69/78/beetles-insects-caterpillars-worm-ant-spider-vector-37726978.jpg" title="beetles insects caterpillars worm ant spider" alt="beetles insects caterpillars worm ant spider vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/16/55/ant-abstract-sign-vector-20831655.jpg"><a href="//www.vectorstock.com/royalty-free-vector/ant-abstract-sign-vector-20831655" title="ant abstract sign vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/16/55/ant-abstract-sign-vector-20831655.jpg" title="ant abstract sign" alt="ant abstract sign vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/20/93/military-soldier-avatars-set-on-white-background-vector-24372093.jpg"><a href="//www.vectorstock.com/royalty-free-vector/military-soldier-avatars-set-on-white-background-vector-24372093" title="military soldier avatars set on white background vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/20/93/military-soldier-avatars-set-on-white-background-vector-24372093.jpg" title="military soldier avatars set on white background" alt="military soldier avatars set on white background vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/15/27/spear-icon-template-vector-31941527.jpg"><a href="//www.vectorstock.com/royalty-free-vector/spear-icon-template-vector-31941527" title="spear icon template vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/15/27/spear-icon-template-vector-31941527.jpg" title="spear icon template" alt="spear icon template vector image"></noscript></a></li>
+					</ul>
+				</div>
+				<div class="gallery small more">
+					<ul>
+						<li data-id="21186960" data-title="ant logo design concept template" data-src="https://cdn1.vectorstock.com/i/thumbs/69/60/ant-logo-design-concept-template-vector-21186960.jpg"><a href="//www.vectorstock.com/royalty-free-vector/ant-logo-design-concept-template-vector-21186960" title="ant logo design concept template vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/69/60/ant-logo-design-concept-template-vector-21186960.jpg" title="ant logo design concept template" alt="ant logo design concept template vector image"></noscript></a></li>
+						<li data-id="24923747" data-title="ant head logo icon symbol design" data-src="https://cdn3.vectorstock.com/i/thumbs/37/47/ant-head-logo-icon-symbol-design-vector-24923747.jpg"><a href="//www.vectorstock.com/royalty-free-vector/ant-head-logo-icon-symbol-design-vector-24923747" title="ant head logo icon symbol design vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/37/47/ant-head-logo-icon-symbol-design-vector-24923747.jpg" title="ant head logo icon symbol design" alt="ant head logo icon symbol design vector image"></noscript></a></li>
+						<li data-id="31189735" data-title="gorilla samurai warrior mascot" data-src="https://cdn1.vectorstock.com/i/thumbs/97/35/gorilla-samurai-warrior-mascot-vector-31189735.jpg"><a href="//www.vectorstock.com/royalty-free-vector/gorilla-samurai-warrior-mascot-vector-31189735" title="gorilla samurai warrior mascot vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/97/35/gorilla-samurai-warrior-mascot-vector-31189735.jpg" title="gorilla samurai warrior mascot" alt="gorilla samurai warrior mascot vector image"></noscript></a></li>
+						<li data-id="29014245" data-title="spartan helmet silhouette helmet icon black" data-src="https://cdn1.vectorstock.com/i/thumbs/42/45/spartan-helmet-silhouette-helmet-icon-black-vector-29014245.jpg"><a href="//www.vectorstock.com/royalty-free-vector/spartan-helmet-silhouette-helmet-icon-black-vector-29014245" title="spartan helmet silhouette helmet icon black vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/42/45/spartan-helmet-silhouette-helmet-icon-black-vector-29014245.jpg" title="spartan helmet silhouette helmet icon black" alt="spartan helmet silhouette helmet icon black vector image"></noscript></a></li>
+						<li data-id="23708431" data-title="hand drawn ant" data-src="https://cdn2.vectorstock.com/i/thumbs/84/31/hand-drawn-ant-vector-23708431.jpg"><a href="//www.vectorstock.com/royalty-free-vector/hand-drawn-ant-vector-23708431" title="hand drawn ant vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/84/31/hand-drawn-ant-vector-23708431.jpg" title="hand drawn ant" alt="hand drawn ant vector image"></noscript></a></li>
+						<li data-id="29910336" data-title="insect problem icon" data-src="https://cdn2.vectorstock.com/i/thumbs/03/36/insect-problem-icon-vector-29910336.jpg"><a href="//www.vectorstock.com/royalty-free-vector/insect-problem-icon-vector-29910336" title="insect problem icon vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/03/36/insect-problem-icon-vector-29910336.jpg" title="insect problem icon" alt="insect problem icon vector image"></noscript></a></li>
+						<li data-id="33415509" data-title="simple black insect ant icon" data-src="https://cdn5.vectorstock.com/i/thumbs/55/09/simple-black-insect-ant-icon-vector-33415509.jpg"><a href="//www.vectorstock.com/royalty-free-vector/simple-black-insect-ant-icon-vector-33415509" title="simple black insect ant icon vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/55/09/simple-black-insect-ant-icon-vector-33415509.jpg" title="simple black insect ant icon" alt="simple black insect ant icon vector image"></noscript></a></li>
+						<li data-id="37786395" data-title="mask black glyph icon" data-src="https://cdn1.vectorstock.com/i/thumbs/63/95/mask-black-glyph-icon-vector-37786395.jpg"><a href="//www.vectorstock.com/royalty-free-vector/mask-black-glyph-icon-vector-37786395" title="mask black glyph icon vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/63/95/mask-black-glyph-icon-vector-37786395.jpg" title="mask black glyph icon" alt="mask black glyph icon vector image"></noscript></a></li>
+						<li data-id="14272241" data-title="color flat insects icons set simple flat" data-src="https://cdn2.vectorstock.com/i/thumbs/22/41/color-flat-insects-icons-set-simple-flat-vector-14272241.jpg"><a href="//www.vectorstock.com/royalty-free-vector/color-flat-insects-icons-set-simple-flat-vector-14272241" title="color flat insects icons set simple flat vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/22/41/color-flat-insects-icons-set-simple-flat-vector-14272241.jpg" title="color flat insects icons set simple flat" alt="color flat insects icons set simple flat vector image"></noscript></a></li>
+						<li data-id="22501905" data-title="spartan roman or greek helmet versus background" data-src="https://cdn1.vectorstock.com/i/thumbs/19/05/spartan-roman-or-greek-helmet-versus-background-vector-22501905.jpg"><a href="//www.vectorstock.com/royalty-free-vector/spartan-roman-or-greek-helmet-versus-background-vector-22501905" title="spartan roman or greek helmet versus background vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/19/05/spartan-roman-or-greek-helmet-versus-background-vector-22501905.jpg" title="spartan roman or greek helmet versus background" alt="spartan roman or greek helmet versus background vector image"></noscript></a></li>
+						<li data-id="37151695" data-title="helmet spartan warrior symbol emblem" data-src="https://cdn1.vectorstock.com/i/thumbs/16/95/helmet-spartan-warrior-symbol-emblem-vector-37151695.jpg"><a href="//www.vectorstock.com/royalty-free-vector/helmet-spartan-warrior-symbol-emblem-vector-37151695" title="helmet spartan warrior symbol emblem vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/16/95/helmet-spartan-warrior-symbol-emblem-vector-37151695.jpg" title="helmet spartan warrior symbol emblem" alt="helmet spartan warrior symbol emblem vector image"></noscript></a></li>
+						<li data-id="22522166" data-title="silhouette of a running soldier" data-src="https://cdn2.vectorstock.com/i/thumbs/21/66/silhouette-of-a-running-soldier-vector-22522166.jpg"><a href="//www.vectorstock.com/royalty-free-vector/silhouette-of-a-running-soldier-vector-22522166" title="silhouette of a running soldier vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/21/66/silhouette-of-a-running-soldier-vector-22522166.jpg" title="silhouette of a running soldier" alt="silhouette of a running soldier vector image"></noscript></a></li>
+						<li data-id="32134449" data-title="sketch ant or hand drawn insect bug closeup" data-src="https://cdn5.vectorstock.com/i/thumbs/44/49/sketch-ant-or-hand-drawn-insect-bug-closeup-vector-32134449.jpg"><a href="//www.vectorstock.com/royalty-free-vector/sketch-ant-or-hand-drawn-insect-bug-closeup-vector-32134449" title="sketch ant or hand drawn insect bug closeup vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/44/49/sketch-ant-or-hand-drawn-insect-bug-closeup-vector-32134449.jpg" title="sketch ant or hand drawn insect bug closeup" alt="sketch ant or hand drawn insect bug closeup vector image"></noscript></a></li>
+						<li data-id="37871682" data-title="cartoon potato beetle isolated on white background" data-src="https://cdn3.vectorstock.com/i/thumbs/16/82/cartoon-potato-beetle-isolated-on-white-background-vector-37871682.jpg"><a href="//www.vectorstock.com/royalty-free-vector/cartoon-potato-beetle-isolated-on-white-background-vector-37871682" title="cartoon potato beetle isolated on white background vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/16/82/cartoon-potato-beetle-isolated-on-white-background-vector-37871682.jpg" title="cartoon potato beetle isolated on white background" alt="cartoon potato beetle isolated on white background vector image"></noscript></a></li>
+						<li data-id="33536087" data-title="vintage warrior helmet silhouette logo" data-src="https://cdn3.vectorstock.com/i/thumbs/60/87/vintage-warrior-helmet-silhouette-logo-vector-33536087.jpg"><a href="//www.vectorstock.com/royalty-free-vector/vintage-warrior-helmet-silhouette-logo-vector-33536087" title="vintage warrior helmet silhouette logo vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/60/87/vintage-warrior-helmet-silhouette-logo-vector-33536087.jpg" title="vintage warrior helmet silhouette logo" alt="vintage warrior helmet silhouette logo vector image"></noscript></a></li>
+						<li data-id="26812591" data-title="simple line style knight helmet abstract" data-src="https://cdn2.vectorstock.com/i/thumbs/25/91/simple-line-style-knight-helmet-abstract-vector-26812591.jpg"><a href="//www.vectorstock.com/royalty-free-vector/simple-line-style-knight-helmet-abstract-vector-26812591" title="simple line style knight helmet abstract vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/25/91/simple-line-style-knight-helmet-abstract-vector-26812591.jpg" title="simple line style knight helmet abstract" alt="simple line style knight helmet abstract vector image"></noscript></a></li>
+						<li data-id="22275605" data-title="dirty shoes mens boots black white isolated" data-src="https://cdn1.vectorstock.com/i/thumbs/56/05/dirty-shoes-mens-boots-black-white-isolated-vector-22275605.jpg"><a href="//www.vectorstock.com/royalty-free-vector/dirty-shoes-mens-boots-black-white-isolated-vector-22275605" title="dirty shoes mens boots black white isolated vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/56/05/dirty-shoes-mens-boots-black-white-isolated-vector-22275605.jpg" title="dirty shoes mens boots black white isolated" alt="dirty shoes mens boots black white isolated vector image"></noscript></a></li>
+						<li data-id="21421583" data-title="flat geometric termite" data-src="https://cdn4.vectorstock.com/i/thumbs/15/83/flat-geometric-termite-vector-21421583.jpg"><a href="//www.vectorstock.com/royalty-free-vector/flat-geometric-termite-vector-21421583" title="flat geometric termite vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/15/83/flat-geometric-termite-vector-21421583.jpg" title="flat geometric termite" alt="flat geometric termite vector image"></noscript></a></li>
+						<li data-id="27800250" data-title="ant insect top view hand drawn sketch" data-src="https://cdn1.vectorstock.com/i/thumbs/02/50/ant-insect-top-view-hand-drawn-sketch-vector-27800250.jpg"><a href="//www.vectorstock.com/royalty-free-vector/ant-insect-top-view-hand-drawn-sketch-vector-27800250" title="ant insect top view hand drawn sketch vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/02/50/ant-insect-top-view-hand-drawn-sketch-vector-27800250.jpg" title="ant insect top view hand drawn sketch" alt="ant insect top view hand drawn sketch vector image"></noscript></a></li>
+						<li data-id="21622892" data-title="insect silhouette" data-src="https://cdn3.vectorstock.com/i/thumbs/28/92/insect-silhouette-vector-21622892.jpg"><a href="//www.vectorstock.com/royalty-free-vector/insect-silhouette-vector-21622892" title="insect silhouette vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/28/92/insect-silhouette-vector-21622892.jpg" title="insect silhouette" alt="insect silhouette vector image"></noscript></a></li>
+						<li data-id="35035855" data-title="trendy line art spartan warrior helmet logo design" data-src="https://cdn1.vectorstock.com/i/thumbs/58/55/trendy-line-art-spartan-warrior-helmet-logo-design-vector-35035855.jpg"><a href="//www.vectorstock.com/royalty-free-vector/trendy-line-art-spartan-warrior-helmet-logo-design-vector-35035855" title="trendy line art spartan warrior helmet logo design vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/58/55/trendy-line-art-spartan-warrior-helmet-logo-design-vector-35035855.jpg" title="trendy line art spartan warrior helmet logo design" alt="trendy line art spartan warrior helmet logo design vector image"></noscript></a></li>
+						<li data-id="32436837" data-title="logo under flower simple mascot style" data-src="https://cdn3.vectorstock.com/i/thumbs/68/37/logo-under-flower-simple-mascot-style-vector-32436837.jpg"><a href="//www.vectorstock.com/royalty-free-vector/logo-under-flower-simple-mascot-style-vector-32436837" title="logo under flower simple mascot style vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/68/37/logo-under-flower-simple-mascot-style-vector-32436837.jpg" title="logo under flower simple mascot style" alt="logo under flower simple mascot style vector image"></noscript></a></li>
+						<li data-id="30393466" data-title="red ant cartoon on white" data-src="https://cdn2.vectorstock.com/i/thumbs/34/66/red-ant-cartoon-on-white-vector-30393466.jpg"><a href="//www.vectorstock.com/royalty-free-vector/red-ant-cartoon-on-white-vector-30393466" title="red ant cartoon on white vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/34/66/red-ant-cartoon-on-white-vector-30393466.jpg" title="red ant cartoon on white" alt="red ant cartoon on white vector image"></noscript></a></li>
+						<li data-id="28209561" data-title="gladiator warrior helmet spartan flat" data-src="https://cdn2.vectorstock.com/i/thumbs/95/61/gladiator-warrior-helmet-spartan-flat-vector-28209561.jpg"><a href="//www.vectorstock.com/royalty-free-vector/gladiator-warrior-helmet-spartan-flat-vector-28209561" title="gladiator warrior helmet spartan flat vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/95/61/gladiator-warrior-helmet-spartan-flat-vector-28209561.jpg" title="gladiator warrior helmet spartan flat" alt="gladiator warrior helmet spartan flat vector image"></noscript></a></li>
+						<li data-id="2808218" data-title="origami insects set" data-src="https://cdn4.vectorstock.com/i/thumbs/82/18/origami-insects-set-vector-2808218.jpg"><a href="//www.vectorstock.com/royalty-free-vector/origami-insects-set-vector-2808218" title="origami insects set vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/82/18/origami-insects-set-vector-2808218.jpg" title="origami insects set" alt="origami insects set vector image"></noscript></a></li>
+						<li data-id="27731698" data-title="bomb icon simple flat style" data-src="https://cdn4.vectorstock.com/i/thumbs/16/98/bomb-icon-simple-flat-style-vector-27731698.jpg"><a href="//www.vectorstock.com/royalty-free-vector/bomb-icon-simple-flat-style-vector-27731698" title="bomb icon simple flat style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/16/98/bomb-icon-simple-flat-style-vector-27731698.jpg" title="bomb icon simple flat style" alt="bomb icon simple flat style vector image"></noscript></a></li>
+						<li data-id="30803353" data-title="gas mask and helmet icon simple stylized" data-src="https://cdn4.vectorstock.com/i/thumbs/33/53/gas-mask-and-helmet-icon-simple-stylized-vector-30803353.jpg"><a href="//www.vectorstock.com/royalty-free-vector/gas-mask-and-helmet-icon-simple-stylized-vector-30803353" title="gas mask and helmet icon simple stylized vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/33/53/gas-mask-and-helmet-icon-simple-stylized-vector-30803353.jpg" title="gas mask and helmet icon simple stylized" alt="gas mask and helmet icon simple stylized vector image"></noscript></a></li>
+						<li data-id="6893721" data-title="termites eat piece of wood flat style" data-src="https://cdn2.vectorstock.com/i/thumbs/37/21/termites-eat-piece-of-wood-flat-style-vector-6893721.jpg"><a href="//www.vectorstock.com/royalty-free-vector/termites-eat-piece-of-wood-flat-style-vector-6893721" title="termites eat piece of wood flat style vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/37/21/termites-eat-piece-of-wood-flat-style-vector-6893721.jpg" title="termites eat piece of wood flat style" alt="termites eat piece of wood flat style vector image"></noscript></a></li>
+						<li data-id="1482482" data-title="ant" data-src="https://cdn3.vectorstock.com/i/thumbs/24/82/ant-vector-1482482.jpg"><a href="//www.vectorstock.com/royalty-free-vector/ant-vector-1482482" title="ant vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/24/82/ant-vector-1482482.jpg" title="ant" alt="ant vector image"></noscript></a></li>
+						<li data-id="24259430" data-title="rounded spartan helmet logo concept design symbol" data-src="https://cdn1.vectorstock.com/i/thumbs/94/30/rounded-spartan-helmet-logo-concept-design-symbol-vector-24259430.jpg"><a href="//www.vectorstock.com/royalty-free-vector/rounded-spartan-helmet-logo-concept-design-symbol-vector-24259430" title="rounded spartan helmet logo concept design symbol vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/94/30/rounded-spartan-helmet-logo-concept-design-symbol-vector-24259430.jpg" title="rounded spartan helmet logo concept design symbol" alt="rounded spartan helmet logo concept design symbol vector image"></noscript></a></li>
+						<li class="more"><div><a href="/royalty-free-vectors/vectors-similar-to_38338747" rel="nofollow"><span class="lrg">More Images&hellip;</span><span class="sml">More</span></a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="group-artist" class="group">
+				<h6><span class="icon"></span><strong>More by <a href="/royalty-free-vectors/vectors-by_Anatolir" rel="nofollow">Anatolir</a></strong></h6>
+
+			<div class="gallery large">
+				<ul>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/87/88/soldier-ant-icon-outline-style-vector-38338788.jpg"><a href="//www.vectorstock.com/royalty-free-vector/soldier-ant-icon-outline-style-vector-38338788" title="soldier ant icon outline style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/87/88/soldier-ant-icon-outline-style-vector-38338788.jpg" title="soldier ant icon outline style" alt="soldier ant icon outline style vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/87/18/soldier-ant-icon-flat-style-vector-38338718.jpg"><a href="//www.vectorstock.com/royalty-free-vector/soldier-ant-icon-flat-style-vector-38338718" title="soldier ant icon flat style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/87/18/soldier-ant-icon-flat-style-vector-38338718.jpg" title="soldier ant icon flat style" alt="soldier ant icon flat style vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/87/43/queen-ant-icon-simple-style-vector-38338743.jpg"><a href="//www.vectorstock.com/royalty-free-vector/queen-ant-icon-simple-style-vector-38338743" title="queen ant icon simple style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/87/43/queen-ant-icon-simple-style-vector-38338743.jpg" title="queen ant icon simple style" alt="queen ant icon simple style vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/87/54/farmer-ant-icon-simple-style-vector-38338754.jpg"><a href="//www.vectorstock.com/royalty-free-vector/farmer-ant-icon-simple-style-vector-38338754" title="farmer ant icon simple style vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/87/54/farmer-ant-icon-simple-style-vector-38338754.jpg" title="farmer ant icon simple style" alt="farmer ant icon simple style vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/87/60/pest-ant-icon-simple-style-vector-38338760.jpg"><a href="//www.vectorstock.com/royalty-free-vector/pest-ant-icon-simple-style-vector-38338760" title="pest ant icon simple style vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/87/60/pest-ant-icon-simple-style-vector-38338760.jpg" title="pest ant icon simple style" alt="pest ant icon simple style vector image"></noscript></a></li>
+						<li data-src="https://cdn3.vectorstock.com/i/thumb-large/87/52/digger-ant-icon-simple-style-vector-38338752.jpg"><a href="//www.vectorstock.com/royalty-free-vector/digger-ant-icon-simple-style-vector-38338752" title="digger ant icon simple style vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumb-large/87/52/digger-ant-icon-simple-style-vector-38338752.jpg" title="digger ant icon simple style" alt="digger ant icon simple style vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/87/33/ant-icon-simple-style-vector-38338733.jpg"><a href="//www.vectorstock.com/royalty-free-vector/ant-icon-simple-style-vector-38338733" title="ant icon simple style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/87/33/ant-icon-simple-style-vector-38338733.jpg" title="ant icon simple style" alt="ant icon simple style vector image"></noscript></a></li>
+						<li data-src="https://cdn1.vectorstock.com/i/thumb-large/87/30/pest-ant-icon-flat-style-vector-38338730.jpg"><a href="//www.vectorstock.com/royalty-free-vector/pest-ant-icon-flat-style-vector-38338730" title="pest ant icon flat style vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumb-large/87/30/pest-ant-icon-flat-style-vector-38338730.jpg" title="pest ant icon flat style" alt="pest ant icon flat style vector image"></noscript></a></li>
+						<li data-src="https://cdn4.vectorstock.com/i/thumb-large/87/38/cute-ant-icon-simple-style-vector-38338738.jpg"><a href="//www.vectorstock.com/royalty-free-vector/cute-ant-icon-simple-style-vector-38338738" title="cute ant icon simple style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumb-large/87/38/cute-ant-icon-simple-style-vector-38338738.jpg" title="cute ant icon simple style" alt="cute ant icon simple style vector image"></noscript></a></li>
+						<li data-src="https://cdn5.vectorstock.com/i/thumb-large/85/44/cute-ant-icons-set-simple-style-vector-38078544.jpg"><a href="//www.vectorstock.com/royalty-free-vector/cute-ant-icons-set-simple-style-vector-38078544" title="cute ant icons set simple style vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumb-large/85/44/cute-ant-icons-set-simple-style-vector-38078544.jpg" title="cute ant icons set simple style" alt="cute ant icons set simple style vector image"></noscript></a></li>
+				</ul>
+			</div>
+				<div class="gallery small more">
+					<ul>
+						<li data-id="38338756" data-title="nature ant icon simple style" data-src="https://cdn2.vectorstock.com/i/thumbs/87/56/nature-ant-icon-simple-style-vector-38338756.jpg"><a href="//www.vectorstock.com/royalty-free-vector/nature-ant-icon-simple-style-vector-38338756" title="nature ant icon simple style vector image"><noscript><img src="https://cdn2.vectorstock.com/i/thumbs/87/56/nature-ant-icon-simple-style-vector-38338756.jpg" title="nature ant icon simple style" alt="nature ant icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="38338740" data-title="animal ant icon simple style" data-src="https://cdn1.vectorstock.com/i/thumbs/87/40/animal-ant-icon-simple-style-vector-38338740.jpg"><a href="//www.vectorstock.com/royalty-free-vector/animal-ant-icon-simple-style-vector-38338740" title="animal ant icon simple style vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/87/40/animal-ant-icon-simple-style-vector-38338740.jpg" title="animal ant icon simple style" alt="animal ant icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="38338742" data-title="insect ant icon simple style" data-src="https://cdn3.vectorstock.com/i/thumbs/87/42/insect-ant-icon-simple-style-vector-38338742.jpg"><a href="//www.vectorstock.com/royalty-free-vector/insect-ant-icon-simple-style-vector-38338742" title="insect ant icon simple style vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/87/42/insect-ant-icon-simple-style-vector-38338742.jpg" title="insect ant icon simple style" alt="insect ant icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="38338758" data-title="fauna ant icon simple style" data-src="https://cdn4.vectorstock.com/i/thumbs/87/58/fauna-ant-icon-simple-style-vector-38338758.jpg"><a href="//www.vectorstock.com/royalty-free-vector/fauna-ant-icon-simple-style-vector-38338758" title="fauna ant icon simple style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/87/58/fauna-ant-icon-simple-style-vector-38338758.jpg" title="fauna ant icon simple style" alt="fauna ant icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="38338762" data-title="small ant icon simple style" data-src="https://cdn3.vectorstock.com/i/thumbs/87/62/small-ant-icon-simple-style-vector-38338762.jpg"><a href="//www.vectorstock.com/royalty-free-vector/small-ant-icon-simple-style-vector-38338762" title="small ant icon simple style vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/87/62/small-ant-icon-simple-style-vector-38338762.jpg" title="small ant icon simple style" alt="small ant icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="38338728" data-title="fauna ant icon flat style" data-src="https://cdn4.vectorstock.com/i/thumbs/87/28/fauna-ant-icon-flat-style-vector-38338728.jpg"><a href="//www.vectorstock.com/royalty-free-vector/fauna-ant-icon-flat-style-vector-38338728" title="fauna ant icon flat style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/87/28/fauna-ant-icon-flat-style-vector-38338728.jpg" title="fauna ant icon flat style" alt="fauna ant icon flat style vector image vector image"></noscript></a></li>
+						<li data-id="38338750" data-title="teamwork ant icon simple style" data-src="https://cdn1.vectorstock.com/i/thumbs/87/50/teamwork-ant-icon-simple-style-vector-38338750.jpg"><a href="//www.vectorstock.com/royalty-free-vector/teamwork-ant-icon-simple-style-vector-38338750" title="teamwork ant icon simple style vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/87/50/teamwork-ant-icon-simple-style-vector-38338750.jpg" title="teamwork ant icon simple style" alt="teamwork ant icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="38338745" data-title="team ant icon simple style" data-src="https://cdn1.vectorstock.com/i/thumbs/87/45/team-ant-icon-simple-style-vector-38338745.jpg"><a href="//www.vectorstock.com/royalty-free-vector/team-ant-icon-simple-style-vector-38338745" title="team ant icon simple style vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/87/45/team-ant-icon-simple-style-vector-38338745.jpg" title="team ant icon simple style" alt="team ant icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="32501624" data-title="bug insect icon simple style" data-src="https://cdn5.vectorstock.com/i/thumbs/16/24/bug-insect-icon-simple-style-vector-32501624.jpg"><a href="//www.vectorstock.com/royalty-free-vector/bug-insect-icon-simple-style-vector-32501624" title="bug insect icon simple style vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/16/24/bug-insect-icon-simple-style-vector-32501624.jpg" title="bug insect icon simple style" alt="bug insect icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="38338799" data-title="farmer ant icon outline style" data-src="https://cdn5.vectorstock.com/i/thumbs/87/99/farmer-ant-icon-outline-style-vector-38338799.jpg"><a href="//www.vectorstock.com/royalty-free-vector/farmer-ant-icon-outline-style-vector-38338799" title="farmer ant icon outline style vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/87/99/farmer-ant-icon-outline-style-vector-38338799.jpg" title="farmer ant icon outline style" alt="farmer ant icon outline style vector image vector image"></noscript></a></li>
+						<li data-id="32501634" data-title="forest bug icon simple style" data-src="https://cdn5.vectorstock.com/i/thumbs/16/34/forest-bug-icon-simple-style-vector-32501634.jpg"><a href="//www.vectorstock.com/royalty-free-vector/forest-bug-icon-simple-style-vector-32501634" title="forest bug icon simple style vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/16/34/forest-bug-icon-simple-style-vector-32501634.jpg" title="forest bug icon simple style" alt="forest bug icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="32501620" data-title="bug icon simple style" data-src="https://cdn1.vectorstock.com/i/thumbs/16/20/bug-icon-simple-style-vector-32501620.jpg"><a href="//www.vectorstock.com/royalty-free-vector/bug-icon-simple-style-vector-32501620" title="bug icon simple style vector image"><noscript><img src="https://cdn1.vectorstock.com/i/thumbs/16/20/bug-icon-simple-style-vector-32501620.jpg" title="bug icon simple style" alt="bug icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="32501622" data-title="danger bug icon simple style" data-src="https://cdn3.vectorstock.com/i/thumbs/16/22/danger-bug-icon-simple-style-vector-32501622.jpg"><a href="//www.vectorstock.com/royalty-free-vector/danger-bug-icon-simple-style-vector-32501622" title="danger bug icon simple style vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/16/22/danger-bug-icon-simple-style-vector-32501622.jpg" title="danger bug icon simple style" alt="danger bug icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="32501628" data-title="insect nature bug icon simple style" data-src="https://cdn4.vectorstock.com/i/thumbs/16/28/insect-nature-bug-icon-simple-style-vector-32501628.jpg"><a href="//www.vectorstock.com/royalty-free-vector/insect-nature-bug-icon-simple-style-vector-32501628" title="insect nature bug icon simple style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/16/28/insect-nature-bug-icon-simple-style-vector-32501628.jpg" title="insect nature bug icon simple style" alt="insect nature bug icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="38338782" data-title="queen ant icon outline style" data-src="https://cdn3.vectorstock.com/i/thumbs/87/82/queen-ant-icon-outline-style-vector-38338782.jpg"><a href="//www.vectorstock.com/royalty-free-vector/queen-ant-icon-outline-style-vector-38338782" title="queen ant icon outline style vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/87/82/queen-ant-icon-outline-style-vector-38338782.jpg" title="queen ant icon outline style" alt="queen ant icon outline style vector image vector image"></noscript></a></li>
+						<li data-id="32501639" data-title="pest bug icon simple style" data-src="https://cdn5.vectorstock.com/i/thumbs/16/39/pest-bug-icon-simple-style-vector-32501639.jpg"><a href="//www.vectorstock.com/royalty-free-vector/pest-bug-icon-simple-style-vector-32501639" title="pest bug icon simple style vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/16/39/pest-bug-icon-simple-style-vector-32501639.jpg" title="pest bug icon simple style" alt="pest bug icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="27141573" data-title="knight helmet icon simple style" data-src="https://cdn4.vectorstock.com/i/thumbs/15/73/knight-helmet-icon-simple-style-vector-27141573.jpg"><a href="//www.vectorstock.com/royalty-free-vector/knight-helmet-icon-simple-style-vector-27141573" title="knight helmet icon simple style vector image"><noscript><img src="https://cdn4.vectorstock.com/i/thumbs/15/73/knight-helmet-icon-simple-style-vector-27141573.jpg" title="knight helmet icon simple style" alt="knight helmet icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="24724802" data-title="american hunting rifle icon simple style" data-src="https://cdn3.vectorstock.com/i/thumbs/48/02/american-hunting-rifle-icon-simple-style-vector-24724802.jpg"><a href="//www.vectorstock.com/royalty-free-vector/american-hunting-rifle-icon-simple-style-vector-24724802" title="american hunting rifle icon simple style vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/48/02/american-hunting-rifle-icon-simple-style-vector-24724802.jpg" title="american hunting rifle icon simple style" alt="american hunting rifle icon simple style vector image vector image"></noscript></a></li>
+						<li data-id="38338797" data-title="digger ant icon outline style" data-src="https://cdn3.vectorstock.com/i/thumbs/87/97/digger-ant-icon-outline-style-vector-38338797.jpg"><a href="//www.vectorstock.com/royalty-free-vector/digger-ant-icon-outline-style-vector-38338797" title="digger ant icon outline style vector image"><noscript><img src="https://cdn3.vectorstock.com/i/thumbs/87/97/digger-ant-icon-outline-style-vector-38338797.jpg" title="digger ant icon outline style" alt="digger ant icon outline style vector image vector image"></noscript></a></li>
+						<li data-id="38338769" data-title="cute ant icon outline style" data-src="https://cdn5.vectorstock.com/i/thumbs/87/69/cute-ant-icon-outline-style-vector-38338769.jpg"><a href="//www.vectorstock.com/royalty-free-vector/cute-ant-icon-outline-style-vector-38338769" title="cute ant icon outline style vector image"><noscript><img src="https://cdn5.vectorstock.com/i/thumbs/87/69/cute-ant-icon-outline-style-vector-38338769.jpg" title="cute ant icon outline style" alt="cute ant icon outline style vector image vector image"></noscript></a></li>
+						<li class="more"><div><a href="/royalty-free-vectors/vectors-by_Anatolir" rel="nofollow"><span class="lrg">More Images&hellip;</span><span class="sml">More</span></a></div></li>
+					</ul>
+				</div>
+			</div>
+			<div id="group-keywords" class="group">
+				<h6><span class="icon"></span><strong>Related Searches</strong></h6>
+				<ul>
+					<li><a href="/royalty-free-vectors/icon-vectors">Icon</a></li>
+					<li><a href="/royalty-free-vectors/soldier-vectors">Soldier</a></li>
+					<li><a href="/royalty-free-vectors/simple-vectors">Simple</a></li>
+					<li><a href="/royalty-free-vectors/ant-vectors">Ant</a></li>
+					<li><a href="/royalty-free-vectors/isolated-vectors">Isolated</a></li>
+					<li><a href="/royalty-free-vectors/vector-vectors">Vector</a></li>
+					<li><a href="/royalty-free-vectors/black-vectors">Black</a></li>
+					<li><a href="/royalty-free-vectors/white-vectors">White</a></li>
+					<li><a href="/royalty-free-vectors/drawing-vectors">Drawing</a></li>
+					<li><a href="/royalty-free-vectors/home-vectors">Home</a></li>
+					<li><a href="/royalty-free-vectors/nature-vectors">Nature</a></li>
+					<li><a href="/royalty-free-vectors/house-vectors">House</a></li>
+					<li><a href="/royalty-free-vectors/animal-vectors">Animal</a></li>
+					<li><a href="/royalty-free-vectors/eat-vectors">Eat</a></li>
+					<li><a href="/royalty-free-vectors/insect-vectors">Insect</a></li>
+					<li><a href="/royalty-free-vectors/dead-vectors">Dead</a></li>
+					<li><a href="/royalty-free-vectors/warning-vectors">Warning</a></li>
+					<li><a href="/royalty-free-vectors/wild-vectors">Wild</a></li>
+					<li><a href="/royalty-free-vectors/dirty-vectors">Dirty</a></li>
+					<li><a href="/royalty-free-vectors/wood-vectors">Wood</a></li>
+					<li><a href="/royalty-free-vectors/bug-vectors">Bug</a></li>
+					<li><a href="/royalty-free-vectors/small-vectors">Small</a></li>
+					<li><a href="/royalty-free-vectors/head-vectors">Head</a></li>
+					<li><a href="/royalty-free-vectors/decay-vectors">Decay</a></li>
+					<li><a href="/royalty-free-vectors/lumber-vectors">Lumber</a></li>
+					<li><a href="/royalty-free-vectors/pest-vectors">Pest</a></li>
+					<li><a href="/royalty-free-vectors/enemy-vectors">Enemy</a></li>
+					<li><a href="/royalty-free-vectors/nest-vectors">Nest</a></li>
+					<li><a href="/royalty-free-vectors/eliminate-vectors">Eliminate</a></li>
+					<li><a href="/royalty-free-vectors/wall-vectors">Wall</a></li>
+					<li><a href="/royalty-free-vectors/orange-vectors">Orange</a></li>
+					<li><a href="/royalty-free-vectors/line-vectors">Line</a></li>
+					<li><a href="/royalty-free-vectors/character-vectors">Character</a></li>
+					<li><a href="/royalty-free-vectors/cute-vectors">Cute</a></li>
+					<li><a href="/royalty-free-vectors/swarm-vectors">Swarm</a></li>
+					<li><a href="/royalty-free-vectors/monster-vectors">Monster</a></li>
+					<li><a href="/royalty-free-vectors/one-vectors">One</a></li>
+					<li><a href="/royalty-free-vectors/strong-vectors">Strong</a></li>
+					<li><a href="/royalty-free-vectors/fauna-vectors">Fauna</a></li>
+					<li><a href="/royalty-free-vectors/timber-vectors">Timber</a></li>
+					<li><a href="/royalty-free-vectors/linear-vectors">Linear</a></li>
+					<li><a href="/royalty-free-vectors/dangerous-vectors">Dangerous</a></li>
+					<li><a href="/royalty-free-vectors/damage-vectors">Damage</a></li>
+					<li><a href="/royalty-free-vectors/soil-vectors">Soil</a></li>
+					<li><a href="/royalty-free-vectors/underground-vectors">Underground</a></li>
+					<li><a href="/royalty-free-vectors/editable-vectors">Editable</a></li>
+					<li><a href="/royalty-free-vectors/termite-vectors">Termite</a></li>
+					<li><a href="/royalty-free-vectors/burrow-vectors">Burrow</a></li>
+				</ul>
+			</div>
+		</section>
+	</article>
+
+	<!-- Footer -->
+	<footer>
+		<div>
+		<div class="column c1">
+			<nav class="company">
+				<h4>VectorStock</h4>
+				<ul>
+					<li><a href="/" title="Home">Home</a></li>
+					<li class="sel"><a href="/free-vectors" title="Free Vectors">Free Vectors</a></li>
+					<li class="sel"><a href="/royalty-free-vectors" title="All Royalty-Free Vectors">All Vectors</a></li>
+				</ul>
+				<ul>
+					<li><a href="/what-is-a-vector" title="What is a Vector?">What is a Vector?</a></li>
+				</ul>
+				<ul>
+					<li class="sel"><a href="/faq" title="Frequently Asked Questions"><span class="long">Frequently Asked Questions</span><span class="short">FAQs</span></a></li>
+					<li><a href="/faq/members/terms-of-use" title="Terms &amp; Conditions">Terms &amp; Conditions</a></li>
+					<li class="sel"><a href="/contact" title="Contact Us">Contact Us</a></li>
+				</ul>
+			</nav>
+		</div>
+		<div class="column c2">
+			<nav class="account">
+				<h4><span class="title">Account</span><span class="icon"></span></h4>
+					<ul>
+						<li><a href="/signup" title="Join Now">Join Now</a></li>
+						<li><a href="/pricing" title="Pricing">Pricing</a></li>
+						<li><a href="/?signup=1&contributor=1" title="Contributor Sign Up">Contributor Sign Up</a></li>
+						<li><a href="/faq/artists/why-sell-at-vectorstock" title="Contributor FAQ">Contributor FAQ</a></li>
+					</ul>
+			</nav>
+		</div>
+		<div class="column c3">
+			<nav class="social">
+				<h4>Social</h4>
+				<ul>
+					<li class="facebook sel"><a href="https://www.facebook.com/VectorStock" target="_blank" rel="noreferrer"><span class="title">Facebook</span><span class="icon"></span></a></li>
+					<li class="pinterest sel"><a href="https://pinterest.com/vectorstock/" target="_blank" rel="noreferrer"><span class="title">Pinterest</span><span class="icon"></span></a></li>
+					<li class="twitter sel"><a href="https://twitter.com/VectorStock" target="_blank" rel="noreferrer"><span class="title">Twitter</span><span class="icon"></span></a></li>
+				</ul>
+			</nav>
+			<div class="signoff">
+				<h5><a href="https://www.vectorstock.com/" title="VectorStock&reg;">VectorStock&reg;</a></h5>
+				<p>VectorStock and the VectorStock logo are registered trademarks of VectorStock Media.<br>
+				&copy; 2022. <span>All Rights Reserved.</span></p>
+			</div>
+		</div>
+		</div>
+	</footer>
+
+
+	<script type="text/javascript" nonce="HwSYZbWDgENXfLwwEs26vf0rQzqsKT06cXdHXa7kNPE=">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","licenseKey":"02e09611df","applicationID":"156179534","transactionName":"ZV0ENRYCC0RYAkVbDVwXJRQXFwpaFhNeSwNeTB9MAhEAUhQXVFEWXUpJFw0GEg==","queueTime":0,"applicationTime":46,"atts":"SRoHQ14YGEo=","errorBeacon":"bam.nr-data.net","agent":""}</script>
+
+</body>
+</html>

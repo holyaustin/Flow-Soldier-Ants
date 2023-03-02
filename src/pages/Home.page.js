@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <>
       <Header
-        title={<><span className="highlight">Crypto</span>Dappy</>}
-        subtitle={<>The brand new <span className="highlight">collectible game</span> on the blockchain</>}
+        title={<><span className="highlight">Soldier</span>Ant</>}
+        subtitle={<>The brand new <span className="highlight">collectible Colony game</span> on the Flow blockchain</>}
       />
       <img className="header-image"
         alt="Header"
         onClick={() => history.push("/packs")}
-        src={`${process.env.PUBLIC_URL}/assets/PackDrops.png`}
+        src={`${process.env.PUBLIC_URL}/assets/bg1.gif`}
       />
     </>
   )
