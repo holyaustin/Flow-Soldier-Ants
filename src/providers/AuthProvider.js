@@ -11,7 +11,7 @@ export default function AuthProvider({ children }) {
   if (!user || !loggedIn) return (
     <>
       <Header
-        title={<><span className="highlight">Crypto</span>Dappy</>}
+        title={<><span className="highlight">Soldier</span>Ant</>}
         subtitle={<>The brand new <span className="highlight">collectible game</span> on the blockchain</>}
       />
       <div

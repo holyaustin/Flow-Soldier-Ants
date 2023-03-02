@@ -10,8 +10,8 @@ export default function Collection() {
   return (
     <>
       <Header
-        title={<>My<span className="highlight">Dappies</span></>}
-        subtitle={<>Here are the <span className="highlight">Dappies and Packs</span> you have collected</>}
+        title={<>My<span className="highlight">Anties</span></>}
+        subtitle={<>Here are the <span className="highlight">Soldier Ant and Colonies</span> you have collected</>}
       />
 
       {!collection ?

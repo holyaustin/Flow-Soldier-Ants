@@ -12,8 +12,8 @@ export default function Packs() {
   return (
     <>
       <Header
-        title={<><span className="highlight">Dappy</span>Packs</>}
-        subtitle={<>Join the <span className="highlight">pack drop</span> to get more dappies</>}
+        title={<><span className="highlight">Soldier Ant </span>Colonies</>}
+        subtitle={<>Join the <span className="highlight">pack drop</span> to get more anties</>}
       />
       <ErrorLoadingRenderer loading={loading} error={error}>
         <DappyList dappies={packs.map(p => new Pack(p?.familyID, p?.name))} store />

@@ -36,7 +36,7 @@ export default function PackDetails() {
           style={{ width: "60%", margin: "0 auto", display: "flex", justifyContent: "center" }}>
           <i className="ri-shopping-cart-fill" style={{ fontSize: "1.2rem", marginRight: ".2rem" }}></i> {parseInt(pack?.price)} FUSD
         </div>
-        <p>Dappies included:</p>
+        <p>Antiesies included:</p>
         <p>
           {dappies.map((d, i) => ` #${d} `)}
         </p>

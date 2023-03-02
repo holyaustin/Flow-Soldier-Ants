@@ -37,8 +37,8 @@ export default function Designer() {
   return (
     <div>
       <Header
-        title={<><span className="highlight">Dappy</span>Designer</>}
-        subtitle={<>Design <span className="highlight">your own</span> Dappies</>}
+        title={<><span className="highlight">Soldier Ant </span>Designer</>}
+        subtitle={<>Design <span className="highlight">your own</span> Anties</>}
       />
       <form className="designer__form">
         <div className="designer__form__item">

@@ -11,7 +11,7 @@ export default function Dappies() {
   return (
     <>
       <Header
-        title={<><span className="highlight">Soldier Ant</span>Store</>}
+        title={<><span className="highlight">Soldier Ant </span> Store</>}
         subtitle={<>Buy individual <span className="highlight">Soldier Ant</span> in our store</>}
       />
       <ErrorLoadingRenderer loading={loading} error={error}>
